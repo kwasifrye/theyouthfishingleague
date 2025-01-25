@@ -1,0 +1,22 @@
+/* Fonts and Colors */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.hero-section {
+  background: linear-gradient(120deg, #f7f9f4, #e6e9d6);
+  padding: 60px 0;
+}
+
+.hero-section h1 {
+  color: #262f0e;
+}
+
+.hero-section ul li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.hero-section ul li i {
+  margin-right: 10px;
+}
