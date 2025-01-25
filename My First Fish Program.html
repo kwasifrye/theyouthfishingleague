@@ -1,0 +1,864 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en-US" data-lang="en-US" crm-lang="en-US" dir="ltr" crm-lcid="1033"
+	same-site-mode="None">
+<head>
+		
+		<meta charset="utf-8" /><meta name="viewport" content="width=device-width,&#32;initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<script type="text/javascript" >
+				
+</script>
+	<title>
+	
+		My First Fish Program
+		
+</title>
+		
+		<script src="/_portal/f9d9ec18-1b80-486b-a8f1-1d66561687a4/Resources/ResourceManager?lang=en-US"></script>
+	
+	<script type="text/javascript">
+		// Refresh all powerBI Iframes on Login in one Iframe
+		window.addEventListener('message', function (event) {
+			if (event && event.data && event.data == 'refreshPowerBI') {
+				$("iframe.powerbi").each(function () {
+					this.src = this.src;
+				});
+			}
+		});
+
+		// Fix for incorrect viewport width setting in IE 10 on Windows Phone 8.
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement("style");
+			msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));
+			document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+		}
+	</script>
+		
+	
+		
+		<link href="/bootstrap.min.css" rel="stylesheet" />
+
+		<link href="https://content.powerapps.com/resource/powerappsportal/dist/font-awesome.BootstrapV5.bundle-2ce6efb497.css" onerror="javascript:&#32;var&#32;target&#32;=&#32;event.target;&#32;var&#32;link&#32;=&#32;document.createElement(&#39;link&#39;);&#32;link.crossOrigin&#32;=&#32;target.crossOrigin;&#32;link.href&#32;=&#32;&#39;/dist/font-awesome.BootstrapV5.bundle-2ce6efb497.css&#39;;&#32;link.rel&#32;=&#32;&#39;stylesheet&#39;;&#32;target.insertAdjacentElement(&#39;afterend&#39;,link);" rel="stylesheet" />
+
+				<link href="https://content.powerapps.com/resource/powerappsportal/dist/preform.BootstrapV5.bundle-66ccebb849.css" onerror="javascript:&#32;var&#32;target&#32;=&#32;event.target;&#32;var&#32;link&#32;=&#32;document.createElement(&#39;link&#39;);&#32;link.crossOrigin&#32;=&#32;target.crossOrigin;&#32;link.href&#32;=&#32;&#39;/dist/preform.BootstrapV5.bundle-66ccebb849.css&#39;;&#32;link.rel&#32;=&#32;&#39;stylesheet&#39;;&#32;target.insertAdjacentElement(&#39;afterend&#39;,link);" rel="stylesheet" />
+
+
+		
+			
+
+
+		
+		<link href="/theme.css" rel="stylesheet" />
+<link href="/portalbasictheme.css" rel="stylesheet" />
+
+		
+		
+		
+		
+		
+	
+		
+		<link href="https://content.powerapps.com/resource/powerappsportal/dist/pwa-style.bundle-2739c60227.css" onerror="javascript:&#32;var&#32;target&#32;=&#32;event.target;&#32;var&#32;link&#32;=&#32;document.createElement(&#39;link&#39;);&#32;link.crossOrigin&#32;=&#32;target.crossOrigin;&#32;link.href&#32;=&#32;&#39;/dist/pwa-style.bundle-2739c60227.css&#39;;&#32;link.rel&#32;=&#32;&#39;stylesheet&#39;;&#32;target.insertAdjacentElement(&#39;afterend&#39;,link);" rel="stylesheet" />
+
+		</head>
+<body data-sitemap-state="/Fishing-Resources-Hub/My-First-Fish-Program/:/Fishing-Resources-Hub/:/"
+	data-dateformat="M/d/yyyy"
+	data-timeformat="h:mm tt"
+	data-datetimeformat="M/d/yyyy h:mm tt"
+	data-app-path="/"
+	data-ckeditor-basepath="/js/BaseHtmlContentDesigner/Libs/msdyncrm_/libs/ckeditor/"
+	data-case-deflection-url="/_services/search/f9d9ec18-1b80-486b-a8f1-1d66561687a4">
+
+
+	
+		<link href="https://content.powerapps.com/resource/powerappsportal/dist/pcf-style.bundle-2659c6f064.css" onerror="javascript:&#32;var&#32;target&#32;=&#32;event.target;&#32;var&#32;link&#32;=&#32;document.createElement(&#39;link&#39;);&#32;link.crossOrigin&#32;=&#32;target.crossOrigin;&#32;link.href&#32;=&#32;&#39;/dist/pcf-style.bundle-2659c6f064.css&#39;;&#32;link.rel&#32;=&#32;&#39;stylesheet&#39;;&#32;target.insertAdjacentElement(&#39;afterend&#39;,link);" rel="stylesheet" />
+
+		
+	
+		
+
+	<div id="offlineNotificationBar" style="display: none;">
+		<img alt="web" class="col-3" id="web" onerror="javascript:&#32;var&#32;target&#32;=&#32;event.target;&#32;var&#32;img&#32;=&#32;document.createElement(&#39;img&#39;);&#32;img.src&#32;=&#32;&#39;/css/images/web.png&#39;;&#32;img.alt&#32;=&#32;&#39;web&#39;;&#32;img.id&#32;=&#32;&#39;web&#39;&#32;;&#32;target.insertAdjacentElement(&#39;afterend&#39;,img);&#32;target.remove();" src="https://content.powerapps.com/resource/powerappsportal/img/web.png" />
+		<div id="message">You&#8217;re offline. This is a read only version of the page.</div>
+		<div id="close" onclick="this.parentElement.style.display='none';"><img alt="close" class="col-3" onerror="javascript:&#32;var&#32;target&#32;=&#32;event.target;&#32;var&#32;img&#32;=&#32;document.createElement(&#39;img&#39;);&#32;img.src&#32;=&#32;&#39;/css/images/close.png&#39;;&#32;img.alt&#32;=&#32;&#39;close&#39;;&#32;img.id&#32;=&#32;&#39;&#39;&#32;;&#32;target.insertAdjacentElement(&#39;afterend&#39;,img);&#32;target.remove();" src="https://content.powerapps.com/resource/powerappsportal/img/close.png" /></div>
+	</div>
+
+	
+
+	<script type="text/javascript">
+        window.DisableCkEditor = window.DisableCkEditor || {};
+		DisableCkEditor.Value = 'False';
+    </script>
+
+	<script type="text/javascript">
+        var enableOmniChannelWidgetWithSiteCopilot = 'False';
+        if (enableOmniChannelWidgetWithSiteCopilot === "True" || enableOmniChannelWidgetWithSiteCopilot === "true") {
+            const authUrl = window.location.origin + "/_services/auth/portalusertoken";
+            const fetchWithRetries = async (url, options, retries) => {
+                try {
+                    const authResponse = await fetch(url, options);
+                    const token = await authResponse.text();
+                    sessionStorage['c2Token'] = token;
+                } catch (err) {
+                    if (retries === 1) throw err;
+                    return await fetchWithRetries(url, options, retries - 1);
+                }
+            };
+            fetchWithRetries(authUrl, { method: "POST" }, 4);
+        }
+    </script>
+
+	<script type="text/javascript">
+		var isPvaBotAuthenticated = sessionStorage['isPvaBotAuthenticated'];
+		var isPortalUserLoggedIn = 'False';
+
+        if ((isPvaBotAuthenticated != null || isPvaBotAuthenticated != undefined) && isPvaBotAuthenticated != isPortalUserLoggedIn) {
+			sessionStorage['triggerPvaBotSignOut'] = true;
+			sessionStorage.removeItem('c2Token');
+            sessionStorage.removeItem('directLinetoken');
+            sessionStorage.removeItem('conversation_Id');
+		}
+		sessionStorage['isPvaBotAuthenticated'] = isPortalUserLoggedIn;
+    </script>
+
+	<script type="text/javascript">
+		window["Microsoft"] = window["Microsoft"] || {};
+		window["Microsoft"].Dynamic365 = {
+			Portal: {
+				
+				User: {
+					userName: '',
+					contactId: ''
+				},
+				
+				version: '9.6.10.18',
+				type: 'DefaultPortalTemplate_V2',
+				id: 'd59f2089-d3a3-4787-a8ca-e85c3f6843aa', 
+				geo: 'NAM', 
+				tenant: '8dff095b-4a25-4ac8-9488-f6c93cc595dc', 
+				correlationId: '6e29a403-65ff-441a-8832-1a4237dc8318',
+				orgEnvironmentId: '57efd565-1c38-e594-8b87-dad0a2527b12',
+				orgId: 'ef0dc54f-fd76-ef11-ac1e-6045bd080c3b',
+				portalProductionOrTrialType: 'Trial',
+				isTelemetryEnabled: 'True',
+				InstrumentationSettings: {
+					instrumentationKey: '197418c5cb8c4426b201f9db2e87b914-87887378-2790-49b0-9295-51f43b6204b1-7172',
+					collectorEndpoint: 'https://us-mobile.events.data.microsoft.com/OneCollector/1.0/'
+				},
+				timerProfileForBatching: 'NEAR_REAL_TIME'
+			}
+		}
+
+		// Mark request not cacheable if Dynamics365PortalAnalytics cookie is being refreshed by the server or if the cookie in request header is invalid
+		
+
+		// For client side telemetry intializing Dynamics365PortalAnalytics cookie object
+		
+		window["Microsoft"].Dynamic365.Portal.dynamics365PortalAnalytics = 'h1T_ucSU71rsCPljxNcPwTe8sOO0siSM39TRmbEiMBDLr-i0yP3Iwt4DhfiS8_HCrkFYVrLYjWqdx6FobIRvnZDagoyVZorih5Fdu-naAwd6g3Bt3aaFBEJGr_ZT5s2KLkL7F4kZaIJViBDivgZMjg2'; // CodeQL [SM00430] False Positive: only alphanumeric chars allowed, for non-alphanumeric char it will return INVALID_CHARACTERS_IN_COOKIE 
+		
+
+    </script>
+	
+	<script type="text/javascript">
+
+		
+    </script>
+
+	
+		
+
+<div class=' navbar-expand-xl navbar navbar-dark static-top' role='banner'>
+  <div class='skip-to-content'>
+    <a href='#mainContent'>Skip to main content</a>
+  </div>
+  <div class='container  custom-container'>
+    <!--
+      div class=" d-xs-block d-sm-none d-md-none d-lg-none  ">
+        <div class="xrm-editable-html&#32;xrm-attribute" data-languageContext="English"><div class="xrm-attribute-value"><a href='~/'>
+  <img src='/Logo-sm-64.png
+' alt='Company name logo
+' style='width: auto; height: 32px; margin: 0 10px;'>
+  
+    <h1 class='siteTitle custom-sitetitle'>Youth Fishing League</h1>
+  
+</a>
+</div></div>
+      </div
+    -->
+    <div class=' d-xs-block d-sm-block d-md-block d-lg-block navbar-brand navbar-header'>
+      <div class="xrm-editable-html&#32;xrm-attribute" data-languageContext="English"><div class="xrm-attribute-value"><a href='~/'>
+  <img src='/Logo-sm-64.png
+' alt='Company name logo
+' style='width: auto; height: 32px; margin: 0 10px;'>
+  
+    <h1 class='siteTitle custom-sitetitle'>Youth Fishing League</h1>
+  
+</a>
+</div></div>
+    </div>
+    <button type='button' class='navbar-toggler collapsed custom-navbar-toggler' title='Toggle navigation' data-bs-toggle='collapse' data-bs-target='#navbar' aria-expanded='false' onclick='setHeight();'>
+      <span class='visually-hidden'>Toggle navigation</span>
+      <span class='navbar-toggler-icon'></span>
+    </button>
+
+    <div id='navbar' class='navbar-collapse collapse' style="width: min-content;">
+      
+      
+        <nav aria-label='Main Navigation' class='ms-auto menu-bar ' data-weblinks-maxdepth='2'>
+          <ul class='nav navbar-nav weblinks'>
+            
+              
+              
+                
+              
+              <li class=' nav-item weblink '>
+                <a
+                  aria-label='Home'
+                                      href='/' aria-roledescription='link'
+
+                    title='Home'
+                  
+                >
+                    Home
+                </a>
+                
+              </li>
+            
+              
+                <li class=' nav-item divider-vertical' aria-hidden='true'></li>
+              
+              
+                
+              
+              <li class=' nav-item weblink  dropdown'>
+                <a
+                  aria-label='About the League'
+                                      href='#' role='button' class='dropdown-toggle' data-bs-toggle='dropdown'
+
+                    title='About the League'
+                  
+                >
+                    About the League
+                    <span class='caret'></span>
+                </a>
+                
+                  <ul class='dropdown-menu dropdown-menu-end'>
+                    
+                      <li>
+                        <a
+                          aria-label='About the League'
+                          class='dropdown-item'
+                          aria-roledescription='link'
+                          href='/About-the-League/'
+                          
+                          
+                          
+                            title='About the League'
+                          
+                        >
+About the League                        </a>
+                      </li>
+                      <div class='dropdown-divider'></div>
+                    
+                    
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          aria-label='Who We Serve'
+                          aria-roledescription='link'
+                          href='/About-the-League/Who-We-Serve/'
+                          
+                          
+                          
+                            title='Who We Serve'
+                          
+                        >
+                          Who We Serve
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          aria-label='Contact us'
+                          aria-roledescription='link'
+                          href='/About-the-League/contact-us/'
+                          
+                          
+                          
+                            title='Contact us'
+                          
+                        >
+                          Contact us
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              
+                <li class=' nav-item divider-vertical' aria-hidden='true'></li>
+              
+              
+                
+              
+              <li class=' nav-item weblink '>
+                <a
+                  aria-label='Our Impact'
+                                      href='/Our-Impact/' aria-roledescription='link'
+
+                    title='Our Impact'
+                  
+                >
+                    Our Impact
+                </a>
+                
+              </li>
+            
+              
+                <li class=' nav-item divider-vertical' aria-hidden='true'></li>
+              
+              
+                
+              
+              <li class=' nav-item weblink  dropdown'>
+                <a
+                  aria-label='Upcoming Events'
+                                      href='#' role='button' class='dropdown-toggle' data-bs-toggle='dropdown'
+
+                    title='Upcoming Events'
+                  
+                >
+                    Upcoming Events
+                    <span class='caret'></span>
+                </a>
+                
+                  <ul class='dropdown-menu dropdown-menu-end'>
+                    
+                      <li>
+                        <a
+                          aria-label='Upcoming Events'
+                          class='dropdown-item'
+                          aria-roledescription='link'
+                          href='/Upcoming-Events/'
+                          
+                          
+                          
+                            title='Upcoming Events'
+                          
+                        >
+Upcoming Events                        </a>
+                      </li>
+                      <div class='dropdown-divider'></div>
+                    
+                    
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          aria-label='Opening Day (County Founding)'
+                          aria-roledescription='link'
+                          href='/Upcoming-Events/Opening-Day-County-Founding/'
+                          
+                          
+                          
+                            title='Opening Day (County Founding)'
+                          
+                        >
+                          Opening Day (County Founding)
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          aria-label='Self-Reliance'
+                          aria-roledescription='link'
+                          href='/Upcoming-Events/Self-Reliance/'
+                          
+                          
+                          
+                            title='Self-Reliance'
+                          
+                        >
+                          Self-Reliance
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          aria-label='Father’s Day Event'
+                          aria-roledescription='link'
+                          href='/Upcoming-Events/Fathers-Day-Event/'
+                          
+                          
+                          
+                            title='Father’s Day Event'
+                          
+                        >
+                          Father’s Day Event
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          aria-label='Independence Day Event'
+                          aria-roledescription='link'
+                          href='/Upcoming-Events/Independence-Day-Event/'
+                          
+                          
+                          
+                            title='Independence Day Event'
+                          
+                        >
+                          Independence Day Event
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          aria-label='Independence Day Event (1)'
+                          aria-roledescription='link'
+                          href='/Upcoming-Events/Independence-Day-Event-1/'
+                          
+                          
+                          
+                            title='Independence Day Event (1)'
+                          
+                        >
+                          Independence Day Event (1)
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              
+                <li class=' nav-item divider-vertical' aria-hidden='true'></li>
+              
+              
+                
+              
+              <li class=' nav-item weblink  dropdown'>
+                <a
+                  aria-label='Fishing Resources Hub'
+                                      href='#' role='button' class='dropdown-toggle' data-bs-toggle='dropdown'
+
+                    title='Fishing Resources Hub'
+                  
+                >
+                    Fishing Resources Hub
+                    <span class='caret'></span>
+                </a>
+                
+                  <ul class='dropdown-menu dropdown-menu-end'>
+                    
+                      <li>
+                        <a
+                          aria-label='Fishing Resources Hub'
+                          class='dropdown-item'
+                          aria-roledescription='link'
+                          href='/Fishing-Resources-Hub/'
+                          
+                          
+                          
+                            title='Fishing Resources Hub'
+                          
+                        >
+Fishing Resources Hub                        </a>
+                      </li>
+                      <div class='dropdown-divider'></div>
+                    
+                    
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          aria-label='Casting with Confidence'
+                          aria-roledescription='link'
+                          href='/Fishing-Resources-Hub/Casting-with-Confidence/'
+                          
+                          
+                          
+                            title='Casting with Confidence'
+                          
+                        >
+                          Casting with Confidence
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          aria-label='Get Your Fishing License in Maryland'
+                          aria-roledescription='link'
+                          href='/Fishing-Resources-Hub/Get-Your-Fishing-License-in-Maryland/'
+                          
+                          
+                          
+                            title='Get Your Fishing License in Maryland'
+                          
+                        >
+                          Get Your Fishing License in Maryland
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          aria-label='My First Fish Program'
+                          aria-roledescription='link'
+                          href='/Fishing-Resources-Hub/My-First-Fish-Program/'
+                          
+                          
+                          
+                            title='My First Fish Program'
+                          
+                        >
+                          My First Fish Program
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              
+                <li class=' nav-item divider-vertical' aria-hidden='true'></li>
+              
+              
+                
+              
+              <li class=' nav-item weblink  dropdown'>
+                <a
+                  aria-label='Volunteer'
+                                      href='#' role='button' class='dropdown-toggle' data-bs-toggle='dropdown'
+
+                    title='Volunteer'
+                  
+                >
+                    Volunteer
+                    <span class='caret'></span>
+                </a>
+                
+                  <ul class='dropdown-menu dropdown-menu-end'>
+                    
+                      <li>
+                        <a
+                          aria-label='Volunteer'
+                          class='dropdown-item'
+                          aria-roledescription='link'
+                          href='/Volunteer/'
+                          
+                          
+                          
+                            title='Volunteer'
+                          
+                        >
+Volunteer                        </a>
+                      </li>
+                      <div class='dropdown-divider'></div>
+                    
+                    
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          aria-label='Frequently Asked Questions'
+                          aria-roledescription='link'
+                          href='/Volunteer/Frequently-Asked-Questions/'
+                          
+                          
+                          
+                            title='Frequently Asked Questions'
+                          
+                        >
+                          Frequently Asked Questions
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+            
+            
+              <li class=' nav-item divider-vertical' aria-hidden='true'></li>
+              <li class=' nav-item dropdown'>
+                <a id='search' class=' nav-link navbar-icon' href='#' data-bs-toggle='dropdown' role='button' aria-expanded='false' aria-label='Search'>
+                  <span class='glyphicon fa-solid fa-magnifying-glass'></span>
+                </a>
+                <div class='dropdown-menu dropdown-search dropdown-menu-end'>
+                  
+
+
+
+
+
+<form method="GET" action="/search/" role="search" class="form-search">
+    <div class="input-group" style="display:table;">
+
+        
+
+        <label for="q" class="visually-hidden">
+            Search
+        </label>
+        <input type="text" class="form-control" style="display:table-cell;width:100%;font-size:14px;padding-top:5px;margin-left:0px;" id="q" name="q"
+               placeholder="Search"
+               value=""
+               title="Search">
+        <div class="input-group-btn" style="display:table-cell;text-align:left;">
+            <button type="submit" class="btn btn-primary"
+                    title="Search"
+                    aria-label="Search">
+                <span class="fa fa-search" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+</form>
+
+                </div>
+              </li>
+            
+            <li class=' nav-item divider-vertical' aria-hidden='true'></li>
+            
+            
+              <li class="nav-item">
+                <a class="nav-link" aria-label='Sign in' aria-roledescription='link' href='/SignIn?returnUrl=%2FFishing-Resources-Hub%2FMy-First-Fish-Program%2F'>
+                  Sign in
+                </a>
+              </li>
+            
+          </ul>
+          
+        </nav>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+<script type='text/javascript'>
+  window.onload = function () {
+    if (window.navigator.appName == 'Microsoft Internet Explorer' || window.navigator.userAgent.indexOf('Trident') > 0) {
+      var searchElement = document.getElementById('search');
+      if (searchElement != null) searchElement.setAttribute('href', '');
+    }
+  };
+  function setHeight() {
+    var windowHeight = window.innerHeight - 140;
+    var navbar = document.getElementById('navbar');
+    if (navbar) {
+      navbar.style.maxHeight = windowHeight + 'px';
+    }
+  }
+  window.addEventListener('resize', function (event) {
+    setHeight();
+  });
+</script>
+
+	
+
+	<!-- add anti-forgery token-->
+	<div id="antiforgerytoken" data-url="/_layout/tokenhtml"></div>
+
+
+	
+		<!-- Client Telemetry init if telemetry enabled-->
+		<script onerror="javascript:&#32;var&#32;target&#32;=&#32;event.target;&#32;var&#32;script&#32;=&#32;document.createElement(&#39;script&#39;);&#32;script.crossOrigin&#32;=&#32;target.crossOrigin;&#32;script.src&#32;=&#32;&#39;/dist/client-telemetry.bundle-c71b2e2d47.js&#39;;&#32;script.type&#32;=&#32;&#39;text/javascript&#39;;&#32;target.insertAdjacentElement(&#39;afterend&#39;,script);" src="https://content.powerapps.com/resource/powerappsportal/dist/client-telemetry.bundle-c71b2e2d47.js" type="text/javascript"></script>
+
+	
+	
+	<!-- Client Telemetry Wrapper init -->
+	<script onerror="javascript:&#32;var&#32;target&#32;=&#32;event.target;&#32;var&#32;script&#32;=&#32;document.createElement(&#39;script&#39;);&#32;script.crossOrigin&#32;=&#32;target.crossOrigin;&#32;script.src&#32;=&#32;&#39;/dist/client-telemetry-wrapper.bundle-633e70f51b.js&#39;;&#32;script.type&#32;=&#32;&#39;text/javascript&#39;;&#32;target.insertAdjacentElement(&#39;afterend&#39;,script);" src="https://content.powerapps.com/resource/powerappsportal/dist/client-telemetry-wrapper.bundle-633e70f51b.js" type="text/javascript"></script>
+
+	<script>
+		window.clientLogWrapper = new ClientLogWrapper();
+	</script>
+	<script onerror="javascript:&#32;var&#32;target&#32;=&#32;event.target;&#32;var&#32;script&#32;=&#32;document.createElement(&#39;script&#39;);&#32;script.crossOrigin&#32;=&#32;target.crossOrigin;&#32;script.src&#32;=&#32;&#39;/dist/preform.BootstrapV5.moment_2_29_4.bundle-cf8e0fd942.js&#39;;&#32;script.type&#32;=&#32;&#39;text/javascript&#39;;&#32;target.insertAdjacentElement(&#39;afterend&#39;,script);" src="https://content.powerapps.com/resource/powerappsportal/dist/preform.BootstrapV5.moment_2_29_4.bundle-cf8e0fd942.js" type="text/javascript"></script>
+
+	
+
+	<script onerror="javascript:&#32;var&#32;target&#32;=&#32;event.target;&#32;var&#32;script&#32;=&#32;document.createElement(&#39;script&#39;);&#32;script.crossOrigin&#32;=&#32;target.crossOrigin;&#32;script.src&#32;=&#32;&#39;/dist/pcf-dependency.bundle-805a1661b7.js&#39;;&#32;script.type&#32;=&#32;&#39;text/javascript&#39;;&#32;target.insertAdjacentElement(&#39;afterend&#39;,script);" src="https://content.powerapps.com/resource/powerappsportal/dist/pcf-dependency.bundle-805a1661b7.js" type="text/javascript"></script>
+
+					       <script onerror="javascript:&#32;var&#32;target&#32;=&#32;event.target;&#32;var&#32;script&#32;=&#32;document.createElement(&#39;script&#39;);&#32;script.crossOrigin&#32;=&#32;target.crossOrigin;&#32;script.src&#32;=&#32;&#39;/dist/pcf.bundle-9183da3d63.js&#39;;&#32;script.type&#32;=&#32;&#39;text/javascript&#39;;&#32;target.insertAdjacentElement(&#39;afterend&#39;,script);" src="https://content.powerapps.com/resource/powerappsportal/dist/pcf.bundle-9183da3d63.js" type="text/javascript"></script>
+
+					       <script onerror="javascript:&#32;var&#32;target&#32;=&#32;event.target;&#32;var&#32;script&#32;=&#32;document.createElement(&#39;script&#39;);&#32;script.crossOrigin&#32;=&#32;target.crossOrigin;&#32;script.src&#32;=&#32;&#39;/dist/pcf-extended.bundle-e303d53553.js&#39;;&#32;script.type&#32;=&#32;&#39;text/javascript&#39;;&#32;target.insertAdjacentElement(&#39;afterend&#39;,script);" src="https://content.powerapps.com/resource/powerappsportal/dist/pcf-extended.bundle-e303d53553.js" type="text/javascript"></script>
+
+					
+	<!-- Default studio template. Please do not modify -->
+<div id="mainContent" class="wrapper-body" role="main">
+    <div class="page-copy">
+      <div class="xrm-editable-html&#32;xrm-attribute"><div class="xrm-attribute-value"><div class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;">
+  <div class="container" style="display: flex; flex-wrap: wrap;">
+    <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word; padding: 16px; margin: 60px 0px;">
+      <h2 style="text-align: left;">Maryland's My First Fish Program</h2>
+      <p>YFL is proud to partner with the state of Maryland to offer the Maryland My First Fish Program, celebrating the achievement of young anglers catching their first fish! This program provides a personalized certificate to commemorate the occasion, complete with the angler’s name, date of catch, species caught, and the name of their fishing buddy or Captain.<br><br>By participating through YFL, we will streamline the process, ensuring your child's first catch is reported directly to the state of Maryland for recognition. This is an excellent way for kids and families to celebrate their fishing milestone together!</p>
+    </div>
+  </div>
+</div>
+<div class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;">
+  <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+    <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;">
+      <h3 style="text-align: left;">How It Works</h3>
+      <p>Once your child catches their first fish, you can easily submit the details through our online form. We’ll take care of the rest! You'll receive a personalized certificate, and we’ll make sure the achievement is recorded with the state. You can even include a photo of your young angler, which will be featured on the award!</p>
+    </div>
+  </div>
+</div>
+<div class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;">
+  <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+    <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;">
+      <h3 style="text-align: left;">Information We Collect and Share</h3>
+      <p>To create the certificate and report your child’s catch, we will collect the following information: <br><br>Email Address <br>First and Last Name of the Angler <br>Age of the Angler (optional, for your records) <br>Species Caught <br>You can use the Maryland Fish Facts Index to help identify the species. <br>Date of Catch <br>Location of Catch (name of the water body, e.g., Patapsco River) <br>Name of Fishing Buddy or Captain <br><br>Once the form is submitted, we’ll send a printable PDF certificate to commemorate this exciting moment in your child’s fishing journey.&nbsp;</p>
+    </div>
+  </div>
+</div>
+<div class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;">
+  <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+    <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;">
+      <h3 style="text-align: left;">Guidelines</h3>
+      <p>The program is open to anglers of all ages. <br>Any fish caught in Maryland waters is eligible. <br>All fish must comply with Maryland laws—any fish that does not meet legal requirements must be returned to the water immediately. <br><br>Celebrate your child’s first fishing milestone with YFL and the Maryland My First Fish Program!</p>
+    </div>
+  </div>
+</div>
+</div></div>
+    </div>
+</div>
+
+
+	<script onerror="javascript:&#32;var&#32;target&#32;=&#32;event.target;&#32;var&#32;script&#32;=&#32;document.createElement(&#39;script&#39;);&#32;script.crossOrigin&#32;=&#32;target.crossOrigin;&#32;script.src&#32;=&#32;&#39;/dist/pcf-loader.bundle-f4a0e619b8.js&#39;;&#32;script.type&#32;=&#32;&#39;text/javascript&#39;;&#32;target.insertAdjacentElement(&#39;afterend&#39;,script);" src="https://content.powerapps.com/resource/powerappsportal/dist/pcf-loader.bundle-f4a0e619b8.js" type="text/javascript"></script>
+
+		
+		
+	
+
+	
+		<div id="pp-native-controls-react-root"></div>
+<script>window._nativeControlConfig = { "publicPath":"https://content.powerapps.com/resource/powerappsportal/controls", "versions": {"pcf_loader":"0.0.29","pcf_controls":"3.3.1","mf_shared":"0.2.9","host":"0.4.0","data_grid":"1.1.30","controls_fluent_v9":"0.0.32"} }</script>
+<script defer="defer" src="https://content.powerapps.com/resource/powerappsportal/controls/host/main.e9930a0a5c.chunk.js"></script>
+		
+	
+	
+		<footer role="contentinfo" class="footer" data-component-theme="portalThemeColor5">
+  <div class="footer-bottom d-print-none">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-9 text-start">
+          <div class="xrm-editable-html&#32;xrm-attribute" data-languageContext="English"><div class="xrm-attribute-value"><p class="smallText">Copyright ©</p>
+<p class="smallText">2025</p>
+<p class="smallText">. All rights reserved.</p>
+</div></div>
+        </div>
+        <div id="accessibilityLinkContainer" class="col-lg-3 col-md-3 col-sm-3 text-end">
+          
+        </div>
+      </div>
+    </div>
+</footer>
+
+<script type="text/javascript">
+  window.onload = function() {
+    const accessibilityLinkContainer = document.getElementById("accessibilityLinkContainer");
+    switch(window.navigator.language) {
+      case "fr":
+        if (accessibilityLinkContainer != null) {
+          const accessibilityText="Accessibilité : partiellement conforme";
+          const frenchAccessibilityAnchor = document.createElement("a");
+          frenchAccessibilityAnchor.id = "frenchAccesssibleLink";
+          frenchAccessibilityAnchor.target = "_blank";
+          frenchAccessibilityAnchor.href = "https://go.microsoft.com/fwlink/?linkid=2163806";
+          frenchAccessibilityAnchor.title = accessibilityText;
+          frenchAccessibilityAnchor.innerText = accessibilityText;
+          accessibilityLinkContainer.appendChild(frenchAccessibilityAnchor);
+        }
+        break;
+      case "it":
+        if (accessibilityLinkContainer != null) {
+          const accessibilityText="Accessibilità: parzialmente conforme";
+          const italianAccessibilityAnchor = document.createElement("a");
+          italianAccessibilityAnchor.id = "italianAccesssibleLink";
+          italianAccessibilityAnchor.target = "_blank";
+          italianAccessibilityAnchor.href = "https://go.microsoft.com/fwlink/?linkid=2208177";
+          italianAccessibilityAnchor.title = accessibilityText;
+          italianAccessibilityAnchor.innerText = accessibilityText;
+          accessibilityLinkContainer.appendChild(italianAccessibilityAnchor);
+        }
+        break;
+      default: 
+        accessibilityLinkContainer.remove();
+    }
+  };
+ </script>
+	
+	
+	
+	
+	
+	
+	
+	<script onerror="javascript:&#32;var&#32;target&#32;=&#32;event.target;&#32;var&#32;script&#32;=&#32;document.createElement(&#39;script&#39;);&#32;script.crossOrigin&#32;=&#32;target.crossOrigin;&#32;script.src&#32;=&#32;&#39;/dist/bootstrap.BootstrapV5.bundle-be8391e97d.js&#39;;&#32;script.type&#32;=&#32;&#39;text/javascript&#39;;&#32;target.insertAdjacentElement(&#39;afterend&#39;,script);" src="https://content.powerapps.com/resource/powerappsportal/dist/bootstrap.BootstrapV5.bundle-be8391e97d.js" type="text/javascript"></script>
+
+	<script onerror="javascript:&#32;var&#32;target&#32;=&#32;event.target;&#32;var&#32;script&#32;=&#32;document.createElement(&#39;script&#39;);&#32;script.crossOrigin&#32;=&#32;target.crossOrigin;&#32;script.src&#32;=&#32;&#39;/dist/postpreform.BootstrapV5.bundle-11a5a91493.js&#39;;&#32;script.type&#32;=&#32;&#39;text/javascript&#39;;&#32;target.insertAdjacentElement(&#39;afterend&#39;,script);" src="https://content.powerapps.com/resource/powerappsportal/dist/postpreform.BootstrapV5.bundle-11a5a91493.js" type="text/javascript"></script>
+
+	<script onerror="javascript:&#32;var&#32;target&#32;=&#32;event.target;&#32;var&#32;script&#32;=&#32;document.createElement(&#39;script&#39;);&#32;script.crossOrigin&#32;=&#32;target.crossOrigin;&#32;script.src&#32;=&#32;&#39;/dist/app.BootstrapV5.bundle-5e253b544f.js&#39;;&#32;script.type&#32;=&#32;&#39;text/javascript&#39;;&#32;target.insertAdjacentElement(&#39;afterend&#39;,script);" src="https://content.powerapps.com/resource/powerappsportal/dist/app.BootstrapV5.bundle-5e253b544f.js" type="text/javascript"></script>
+
+	<script onerror="javascript:&#32;var&#32;target&#32;=&#32;event.target;&#32;var&#32;script&#32;=&#32;document.createElement(&#39;script&#39;);&#32;script.crossOrigin&#32;=&#32;target.crossOrigin;&#32;script.src&#32;=&#32;&#39;/dist/default-1033.moment_2_29_4.bundle-eda4e638fd.js&#39;;&#32;script.type&#32;=&#32;&#39;text/javascript&#39;;&#32;target.insertAdjacentElement(&#39;afterend&#39;,script);" src="https://content.powerapps.com/resource/powerappsportal/dist/default-1033.moment_2_29_4.bundle-eda4e638fd.js" type="text/javascript"></script>
+
+	
+	
+	
+	
+	<script>
+		//this event will update the title of the page based on active breadcrumb
+		$('.breadcrumb').ready(function () {
+			if ($('.breadcrumb').is(':visible')) {
+				document.querySelector('title').innerHTML = ($('.breadcrumb > li.active').text() + "");
+			}
+		});
+
+		function GoToNewEditor() {
+			var editCmsUrlSegment = "EditInCms";
+			var currentUrl = window.location.href;
+			if (currentUrl.indexOf('?') > -1) {
+				var urlSegments = currentUrl.split("?");
+				window.location.href = window.location.origin + '/' + editCmsUrlSegment + window.location.pathname + '?' + urlSegments[1];
+			}
+			else {
+				window.location.href = window.location.origin + '/' + editCmsUrlSegment + window.location.pathname;
+			}
+		}
+	</script>
+	
+		
+	
+	
+		
+			<script>
+				if ('serviceWorker' in navigator) {
+					navigator.serviceWorker.getRegistrations().then(function(registrations) {
+					for(let registration of registrations) {
+						registration.unregister();
+					}}).catch(function(err) {
+					console.log('Service Worker unregister action failed: ', err);
+					});
+				}
+			</script>
+		
+	
+		
+	<!--Start Show Session Expire Warning Popup here -->
+    
+</body>
+</html>
+<!-- Generated at 1/25/2025 8:47:55 PM -->
+<!-- Page OK -->
